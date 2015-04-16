@@ -47,7 +47,7 @@ Attributes
 * `node['errbit']['revision']` - Errbit revision/refs to deploy (default: master)
 * `node['errbit']['environment']` - Environment variables for Errbit. See also next section.
 
-#### `node['errbit']['environment']`
+### `node['errbit']['environment']`
 
 Override environments in errbit/.envrc
 
