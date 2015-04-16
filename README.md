@@ -18,7 +18,7 @@ Requirements
 This cookbook depends on these external cookbooks:
 
 - git
-- rbenv
+- rbenv (git: "https://github.com/fnichol/chef-rbenv.git")
 - ruby_build
 - mongodb
 - application
@@ -76,6 +76,12 @@ Original default is `[0]`
 
 Usage
 -----
+
+```
+# Berksfile
+cookbook "rbenv", git: "https://github.com/fnichol/chef-rbenv.git"
+cookbook "errbit-server"
+```
 
 ```ruby
 include_recipe "errbit-server::default"
