@@ -6,7 +6,7 @@
 # MIT License
 #
 
-include_recipe "rbenv::system_install"
+include_recipe "errbit-server::rbenv"
 
 execute "rake errbit:bootstrap to create admin user" do
   command "bundle exec rake errbit:bootstrap > /opt/errbit/bootstrap.out"

@@ -6,16 +6,18 @@
 # MIT License
 #
 
-include_recipe "ruby_build"
-include_recipe "rbenv::system_install"
+include_recipe "rbenv::default"
+include_recipe "rbenv::ruby_build"
 
 _ruby_version = node["errbit"]["ruby_version"]
 
 rbenv_ruby _ruby_version
 
-rbenv_global _ruby_version
-
 rbenv_gem "bundler" do
-  rbenv_version _ruby_version
+  ruby_version _ruby_version
   action :install
+end
+
+file "/etc/profile.d/rbenv.sh" do
+  mode '0755'
 end

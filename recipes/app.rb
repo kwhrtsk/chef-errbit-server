@@ -6,12 +6,16 @@
 # MIT License
 #
 
+include_recipe "errbit-server::rbenv"
+
 include_recipe "nodejs" # to rake assets:precompile in production
 include_recipe "logrotate"
 
 _user  = node['errbit']['user']
 _group = node['errbit']['group']
 _environment = node['errbit']['environment'].dup
+_ruby_version = node['errbit']['ruby_version']
+_environment["RBENV_VERSION"] = _ruby_version
 
 deploy "/opt/errbit" do
   action        :deploy
@@ -39,15 +43,16 @@ deploy "/opt/errbit" do
       end
     end
 
-    execute "bundle install --path=#{new_resource.deploy_to}/shared/bundle" do
+    execute ". /etc/profile.d/rbenv.sh && bundle install --path=#{new_resource.deploy_to}/shared/bundle" do
+      environment({"RBENV_VERSION" => _ruby_version})
       cwd  release_path
       user _user
     end
 
-    execute "bundle exec rake assets:precompile" do
+    execute ". /etc/profile.d/rbenv.sh && bundle exec rake assets:precompile" do
       cwd  release_path
       user _user
-      environment "RAILS_ENV" => "production"
+      environment({"RBENV_VERSION" => _ruby_version, "RAILS_ENV" => "production"})
     end
   end
 end
