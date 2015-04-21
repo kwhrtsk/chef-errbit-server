@@ -43,5 +43,5 @@
   "recipes": {
     "errbit-server::default": "Install and configure Errbit server"
   },
-  "version": "1.0.1"
+  "version": "1.0.2"
 }
