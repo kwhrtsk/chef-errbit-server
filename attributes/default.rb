@@ -37,10 +37,3 @@ default['errbit']['environment'] = {
 #  'GITHUB_CLIENT_ID'                  => '',
 #  'GITHUB_SECRET'                     => '',
 }
-
-if platform == "ubuntu"
-  # Workaround for rbenv build error on ubuntu
-  # https://github.com/fnichol/chef-rbenv.git
-  node.set['ruby_build']['install_pkgs_cruby'] ||= []
-  node.set['ruby_build']['install_pkgs_cruby'] << "libffi-dev"
-end
