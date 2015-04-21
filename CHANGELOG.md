@@ -3,6 +3,10 @@ errbit-server CHANGELOG
 
 This file is used to list changes made in each version of the errbit-server cookbook.
 
+1.0.1
+-----
+- [kwhrtsk] - Remove workaround for https://github.com/fnichol/chef-rbenv
+
 1.0.0
 -----
 - [kwhrtsk] - Use rbenv community cookbook instead of https://github.com/fnichol/chef-rbenv
