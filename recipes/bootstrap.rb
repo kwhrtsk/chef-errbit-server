@@ -8,9 +8,13 @@
 
 include_recipe "errbit-server::rbenv"
 
+_environment = node['errbit']['environment'].dup
+_ruby_version = node['errbit']['ruby_version']
+_environment["RBENV_VERSION"] = _ruby_version
+
 execute "rake errbit:bootstrap to create admin user" do
   command "bundle exec rake errbit:bootstrap > /opt/errbit/bootstrap.out"
   cwd "/opt/errbit/current"
-	environment node['errbit']['environment']
+	environment _environment
   creates "/opt/errbit/bootstrap.out"
 end
