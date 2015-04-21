@@ -18,8 +18,7 @@ Requirements
 This cookbook depends on these external cookbooks:
 
 - git
-- rbenv (git: "https://github.com/fnichol/chef-rbenv.git")
-- ruby_build
+- rbenv
 - mongodb
 - application
 - unicorn
@@ -79,7 +78,6 @@ Usage
 
 ```
 # Berksfile
-cookbook "rbenv", git: "https://github.com/fnichol/chef-rbenv.git"
 cookbook "errbit-server"
 ```
 
