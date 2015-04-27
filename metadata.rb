@@ -4,7 +4,7 @@ maintainer_email 'kwhrtsk@gmail.com'
 license          'MIT License'
 description      'Installs/Configures errbit-server'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '1.0.2'
+version          '1.0.3'
 depends          'git'
 depends          'rbenv'
 depends          'mongodb'
