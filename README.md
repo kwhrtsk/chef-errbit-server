@@ -104,6 +104,8 @@ When you use Errbit in production env,
 it is strongly recommended that deploy errbit service with the reverse proxy like nginx or ELB
 in order to encrypt the connection.
 
+Sample Vagrantfile is bundled. See also sample/README.md.
+
 Contributing
 ------------
 

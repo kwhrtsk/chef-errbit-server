@@ -3,6 +3,10 @@ errbit-server CHANGELOG
 
 This file is used to list changes made in each version of the errbit-server cookbook.
 
+1.0.3
+-----
+- [kwhrtsk] - Add sample Vagrantfile.
+
 1.0.2
 -----
 - [kwhrtsk] - Fix bootstrap bug.
