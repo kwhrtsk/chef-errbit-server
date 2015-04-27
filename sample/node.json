@@ -1,0 +1,1 @@
+{"name":"192.168.33.10","chef_environment":"_default","run_list":["recipe[errbit-server]"],"normal":{"tags":[],"chef_ip":"192.168.33.10"}}
