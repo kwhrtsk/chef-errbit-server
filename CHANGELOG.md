@@ -3,6 +3,10 @@ errbit-server CHANGELOG
 
 This file is used to list changes made in each version of the errbit-server cookbook.
 
+1.0.4
+-----
+- [kwhrtsk] - Add license to README.
+
 1.0.3
 -----
 - [kwhrtsk] - Add sample Vagrantfile.
