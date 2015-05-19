@@ -118,4 +118,6 @@ Contributing
 
 License and Authors
 -------------------
+MIT License
+
 Author: Kawahara Taisuke (kwhrtsk@gmail.com)
