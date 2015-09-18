@@ -161,3 +161,4 @@ bin/*
 .kitchen.local.yml
 
 /nodes/*.json
+/clients/*.json
