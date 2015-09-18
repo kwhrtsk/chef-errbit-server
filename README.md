@@ -45,6 +45,7 @@ Attributes
 * `node['errbit']['port']` - Listening port of Errbit service (default: 3000)
 * `node['errbit']['revision']` - Errbit revision/refs to deploy (default: master)
 * `node['errbit']['environment']` - Environment variables for Errbit. See also next section.
+* `node['errbit']['shallow_clone']` - Enable shallow clone when git checkout errbit. Useful if you use master branch. (default: false)
 
 ### `node['errbit']['environment']`
 

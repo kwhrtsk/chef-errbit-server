@@ -25,7 +25,7 @@ deploy "/opt/errbit" do
   group         _group
   migrate       true
   environment   _environment
-  shallow_clone true
+  shallow_clone node['errbit']['shallow_clone']
   keep_releases 10
 
   migration_command "true" # never

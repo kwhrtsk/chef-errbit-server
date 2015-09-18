@@ -7,6 +7,8 @@ default['errbit']['port']         = '3000'
 default['errbit']['revision']     = 'master'
 default['errbit']['pid_file']     = pid_file
 
+default['errbit']['shallow_clone'] = false
+
 default['errbit']['environment'] = {
   'PORT'                              => default['errbit']['port'],
   'RAILS_ENV'                         => 'production',
