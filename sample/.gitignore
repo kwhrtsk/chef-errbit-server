@@ -160,4 +160,4 @@ bin/*
 .kitchen/
 .kitchen.local.yml
 
-
+/nodes/*.json
