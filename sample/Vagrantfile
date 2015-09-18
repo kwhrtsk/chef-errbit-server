@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 Vagrant.configure(2) do |config|
-  config.vm.box = "chef/centos-6.6"
+  config.vm.box = "bento/centos-6.7"
   #config.vm.box = "chef/ubuntu-14.10"
 
   if Vagrant.has_plugin?("vagrant-cachier")
