@@ -1,0 +1,7 @@
+#!/bin/bash
+<% @environment.each do |name, value| -%>
+export <%= name %>="<%= value %>"
+<% end-%>
+
+. /etc/profile.d/rbenv.sh
+cd /opt/errbit/current && bundle exec unicorn -c config/unicorn.default.rb

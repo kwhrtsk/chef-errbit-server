@@ -8,6 +8,7 @@ default['errbit']['revision']     = 'master'
 default['errbit']['pid_file']     = pid_file
 
 default['errbit']['shallow_clone'] = false
+default['errbit']['use_monit']     = true
 
 default['errbit']['environment'] = {
   'PORT'                              => default['errbit']['port'],

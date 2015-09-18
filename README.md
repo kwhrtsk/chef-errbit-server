@@ -7,7 +7,7 @@ Feature:
 
 * Ruby installation using rbenv and ruby_build
 * MongoDB installation
-* Unicorn service configuration(SysV or Upstart)
+* Unicorn service configuration(Monit)
 * Checkout Errbit from Github
 
 Inspired by [chef-errbit](https://github.com/millisami/chef-errbit).
@@ -22,7 +22,7 @@ This cookbook depends on these external cookbooks:
 - mongodb
 - application
 - unicorn
-- service_factory
+- monit_wrapper
 - logrotate
 - nodejs (to rake assets:precompile for errbit in production)
 

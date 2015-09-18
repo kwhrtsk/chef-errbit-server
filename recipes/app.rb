@@ -57,30 +57,11 @@ deploy "/opt/errbit" do
   end
 end
 
-file "/opt/errbit/unicorn.sh" do
+template "/opt/errbit/unicorn.sh" do
   user  _user
   group _group
   mode  '00755'
-  content <<-CODE
-#!/bin/bash
-. /etc/profile.d/rbenv.sh
-cd /opt/errbit/current && bundle exec unicorn -c config/unicorn.default.rb
-  CODE
-end
-
-service_factory "errbit" do
-  action        :create
-  service_desc  "Errbit Unicorn"
-  exec          "/opt/errbit/unicorn.sh"
-  env_variables _environment
-  run_user      _user
-  run_group     _group
-  pid_file      node["errbit"]["pid_file"]
-  create_pid    false
-end
-
-service "errbit" do
-  action [:enable, :start]
+  variables(environment: _environment)
 end
 
 logrotate_app 'errbit' do
@@ -92,4 +73,8 @@ logrotate_app 'errbit' do
     pid=#{node["errbit"]["pid_file"]}
     test -s $pid && kill -USR1 "$(cat $pid)"
   CODE
+end
+
+if node['errbit']['use_monit']
+  include_recipe "errbit-server::monit"
 end
