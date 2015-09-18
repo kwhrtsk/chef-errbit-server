@@ -28,12 +28,12 @@ This cookbook depends on these external cookbooks:
 
 Tested with:
 
-* Chef 11.18.6
-* CentOS 6.6
+* Chef 12.4.1
+* CentOS 6.7
 * Ubuntu 14.10
-* Vagrant 1.7.2
-* VirtualBox 4.3.26
-* Errbit (master on Apr 10, 2015)
+* Vagrant 1.7.4
+* VirtualBox 5.0.0r101573
+* Errbit (master on Aug 23, 2015, revision: d533719)
 * Ruby 2.2.2
 
 Attributes
@@ -43,9 +43,10 @@ Attributes
 * `node['errbit']['group']` - system group for running Errbit Unicorn (default: errbit)
 * `node['errbit']['ruby_version']` - MRI version to install using rbenv (default: 2.2.2)
 * `node['errbit']['port']` - Listening port of Errbit service (default: 3000)
-* `node['errbit']['revision']` - Errbit revision/refs to deploy (default: master)
+* `node['errbit']['revision']` - Errbit revision/refs to deploy. (default: d5337194fc2e75020e4a9558a3ae0a09921d9580, master HEAD on Aug 23, 2015)
 * `node['errbit']['environment']` - Environment variables for Errbit. See also next section.
 * `node['errbit']['shallow_clone']` - Enable shallow clone when git checkout errbit. Useful if you use master branch. (default: false)
+* `node['errbit']['use_monit']` - Enable unicorn service management with monit. (default: true)
 
 ### `node['errbit']['environment']`
 

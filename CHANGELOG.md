@@ -3,6 +3,12 @@ errbit-server CHANGELOG
 
 This file is used to list changes made in each version of the errbit-server cookbook.
 
+1.1.0
+-----
+- [kwhrtsk] - Default disable shallow clone.
+- [kwhrtsk] - Use `monit_wrapper` instead of `service_factory` for unicorn service management.
+- [kwhrtsk] - Change default revision to d533719 (master HEAD on Aug 23, 2015)
+
 1.0.4
 -----
 - [kwhrtsk] - Add license to README.
