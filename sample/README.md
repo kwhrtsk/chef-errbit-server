@@ -7,8 +7,11 @@ Tested with:
 
 ```
 source .envrc
-# export $VAGRANT_PRIVATE_NETWORK_IP=192.168.33.10
+# export $VAGRANT_CENTOS=192.168.33.10
+# export $VAGRANT_UBUNTU=192.168.33.11
 ```
+
+Use `VAGRANT_UBUNTU` if you like ubuntu in the following operations.
 
 ```
 cat <<EOF>> ~/.ssh/config
@@ -31,16 +34,16 @@ vagrant up
 
 ```
 # knife-zero
-./bin/knife zero bootstrap $VAGRANT_PRIVATE_NETWORK_IP -N $VAGRANT_PRIVATE_NETWORK_IP
+./bin/knife zero bootstrap $VAGRANT_CENTOS -N $VAGRANT_CENTOS
 ./bin/knife node from file node.json
 ./bin/knife zero chef_client "name:*" -a knife_zero.host
 ```
 
 ```
 # knife-solo
-./bin/knife solo bootstrap $VAGRANT_PRIVATE_NETWORK_IP
-./bin/knife node run_list add $VAGRANT_PRIVATE_NETWORK_IP errbit-server
-./bin/knife solo cook $VAGRANT_PRIVATE_NETWORK_IP
+./bin/knife solo bootstrap $VAGRANT_CENTOS
+./bin/knife node run_list add $VAGRANT_CENTOS errbit-server
+./bin/knife solo cook $VAGRANT_CENTOS
 ```
 
 ```

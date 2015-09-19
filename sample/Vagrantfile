@@ -2,15 +2,24 @@
 # vi: set ft=ruby :
 
 Vagrant.configure(2) do |config|
-  config.vm.box = "bento/centos-6.7"
-  #config.vm.box = "chef/ubuntu-14.10"
-
   if Vagrant.has_plugin?("vagrant-cachier")
     config.cache.scope = :box 
   end
 
-  if private_network_ip = ENV["VAGRANT_PRIVATE_NETWORK_IP"]
-    config.vm.network "private_network", ip: private_network_ip
+  config.vm.define :centos do |host|
+    host.vm.box = "bento/centos-6.7"
+    host.vm.hostname = "centos.example"
+    if private_network_ip = ENV["VAGRANT_CENTOS"]
+      host.vm.network "private_network", ip: private_network_ip
+    end
+  end
+
+  config.vm.define :ubuntu do |host|
+    host.vm.box = "chef/ubuntu-14.10"
+    host.vm.hostname = "ubuntu.example"
+    if private_network_ip = ENV["VAGRANT_UBUNTU"]
+      host.vm.network "private_network", ip: private_network_ip
+    end
   end
 
   config.vm.provider "virtualbox" do |vb|
