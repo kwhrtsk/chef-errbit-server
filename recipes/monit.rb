@@ -7,7 +7,6 @@ monit_wrapper_monitor _service_name do
   template_cookbook 'errbit-server'
   template_source 'monit/errbit.conf.erb'
   variables cmd_line: _command_line,
-            cmd_line_pattern: _command_line,
             pidfile: node["errbit"]["pid_file"],
             user: node["errbit"]["user"]
 end

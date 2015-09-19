@@ -4,4 +4,4 @@ export <%= name %>="<%= value %>"
 <% end-%>
 
 . /etc/profile.d/rbenv.sh
-cd /opt/errbit/current && bundle exec unicorn -c config/unicorn.default.rb
+cd /opt/errbit/current && bundle exec unicorn -c config/unicorn.default.rb -D
