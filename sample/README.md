@@ -35,7 +35,7 @@ vagrant up
 ```
 # knife-zero
 ./bin/knife zero bootstrap $VAGRANT_CENTOS -N $VAGRANT_CENTOS
-./bin/knife node from file node.json
+./bin/knife node run_list add $VAGRANT_CENTOS errbit-server
 ./bin/knife zero chef_client "name:*" -a knife_zero.host
 ```
 
