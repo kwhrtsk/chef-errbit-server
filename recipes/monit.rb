@@ -1,5 +1,11 @@
 include_recipe "monit_wrapper::default"
 
+
+# override monit-ng::service resource
+# because that cookbook does not works with ubuntu 14.10
+t = resources(:template => "/etc/default/monit")
+t.cookbook "errbit-server"
+
 _service_name = 'errbit'
 _command_line = '/opt/errbit/unicorn.sh'
 
