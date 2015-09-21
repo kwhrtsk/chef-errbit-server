@@ -43,7 +43,7 @@ Attributes
 * `node['errbit']['group']` - system group for running Errbit Unicorn (default: errbit)
 * `node['errbit']['ruby_version']` - MRI version to install using rbenv (default: 2.2.2)
 * `node['errbit']['port']` - Listening port of Errbit service (default: 3000)
-* `node['errbit']['revision']` - Errbit revision/refs to deploy. (default: d5337194fc2e75020e4a9558a3ae0a09921d9580, master HEAD on Aug 23, 2015)
+* `node['errbit']['revision']` - Errbit revision/refs to deploy. (default: f1937f6928cad3122fc9b90b066152cbaf9e692e, master HEAD on Sept 21, 2015)
 * `node['errbit']['environment']` - Environment variables for Errbit. See also next section.
 * `node['errbit']['shallow_clone']` - Enable shallow clone when git checkout errbit. Useful if you use master branch. (default: false)
 * `node['errbit']['use_monit']` - Enable unicorn service management with monit. (default: true)
@@ -58,7 +58,7 @@ https://github.com/errbit/errbit/blob/master/docs/configuration.md
 
 Default values in this recipe is changed only the following:
 
-#### ERRBIT_EMAIL_AT_NOTICES 
+#### ERRBIT_EMAIL_AT_NOTICES
 
 Errbit notifies watchers via email after the set number of occurances of the same error.
 
