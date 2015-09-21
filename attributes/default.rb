@@ -4,7 +4,7 @@ default['errbit']['user']         = 'errbit'
 default['errbit']['group']        = 'errbit'
 default['errbit']['ruby_version'] = '2.2.2'
 default['errbit']['port']         = '3000'
-default['errbit']['revision']     = 'd5337194fc2e75020e4a9558a3ae0a09921d9580' # master HEAD on Aug 23, 2015
+default['errbit']['revision']     = 'f1937f6928cad3122fc9b90b066152cbaf9e692e' # master HEAD on Sept 21, 2015
 default['errbit']['pid_file']     = pid_file
 
 default['errbit']['shallow_clone']      = false
