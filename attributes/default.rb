@@ -7,8 +7,9 @@ default['errbit']['port']         = '3000'
 default['errbit']['revision']     = 'd5337194fc2e75020e4a9558a3ae0a09921d9580' # master HEAD on Aug 23, 2015
 default['errbit']['pid_file']     = pid_file
 
-default['errbit']['shallow_clone'] = false
-default['errbit']['use_monit']     = true
+default['errbit']['shallow_clone']      = false
+default['errbit']['use_monit']          = true
+default['errbit']['monit_service_name'] = 'errbit'
 
 default['errbit']['environment'] = {
   'PORT'                              => default['errbit']['port'],

@@ -6,7 +6,7 @@ include_recipe "monit_wrapper::default"
 t = resources(:template => "/etc/default/monit")
 t.cookbook "errbit-server"
 
-_service_name = 'errbit'
+_service_name = node['errbit']['monit_service_name']
 _command_line = '/opt/errbit/unicorn.sh'
 
 monit_wrapper_monitor _service_name do
@@ -23,4 +23,3 @@ monit_wrapper_service _service_name do
   subscribes :restart, "monit_wrapper_monitor[#{_service_name}]", :delayed
   subscribes :restart, "monit_wrapper_notify_if_not_running[#{_service_name}]", :delayed
 end
-
