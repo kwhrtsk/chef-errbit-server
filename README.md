@@ -127,4 +127,4 @@ Author: Kawahara Taisuke (kwhrtsk@gmail.com)
 Contributors
 ------------
 
-Contributor: Justin Aiken (60tonangel@gmail.com)
+Contributor: [JustinAiken](https://github.com/JustinAiken)
