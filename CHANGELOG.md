@@ -3,6 +3,11 @@ errbit-server CHANGELOG
 
 This file is used to list changes made in each version of the errbit-server cookbook.
 
+1.2.0
+-----
+- [JustinAiken] - Allow config of monit service name.
+- [kwhrtsk] - Change deploy provider to `deploy_revision` from `timestamped_deploy`
+
 1.1.0
 -----
 - [kwhrtsk] - Default disable shallow clone.

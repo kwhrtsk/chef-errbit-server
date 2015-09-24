@@ -123,3 +123,8 @@ License and Authors
 MIT License
 
 Author: Kawahara Taisuke (kwhrtsk@gmail.com)
+
+Contributors
+------------
+
+Contributor: Justin Aiken (60tonangel@gmail.com)
