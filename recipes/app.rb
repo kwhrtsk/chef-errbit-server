@@ -17,7 +17,7 @@ _environment = node['errbit']['environment'].dup
 _ruby_version = node['errbit']['ruby_version']
 _environment["RBENV_VERSION"] = _ruby_version
 
-deploy "/opt/errbit" do
+deploy_revision "/opt/errbit" do
   action        :deploy
   repo          'https://github.com/errbit/errbit.git'
   revision      node['errbit']['revision']
